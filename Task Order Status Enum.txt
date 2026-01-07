@@ -1,0 +1,146 @@
+Task: Order Status Enum
+
+Goal - 
+Learn how to:
+Create an enum
+Use enums in a class
+Add fields and methods to an enum
+Use switch with enums
+
+Problem Description
+You are building a small part of an online shop system.
+
+1. Create an enum called OrderStatus
+
+The enum should contain the following values:
+NEW
+PROCESSING
+SHIPPED
+DELIVERED
+CANCELLED
+
+Each status should have:
+A user-friendly description (String)
+A boolean indicating whether the order can still be cancelled
+
+Example:
+
+NEW → "Order has been created", true
+
+DELIVERED → "Order delivered to customer", false
+
+Add:
+A constructor
+Getter methods
+A method canBeCancelled() that returns the boolean value
+
+2. Create a class called Order
+
+The class should contain:
+int orderId
+OrderStatus status
+
+Add:
+A constructor
+Getters and setters
+A method cancelOrder()
+
+If the order can be cancelled, change the status to CANCELLED
+
+Otherwise, print: "Order cannot be cancelled in its current state"
+
+3. Use a switch statement:
+
+Create a method printStatusMessage() in the Order class that:
+Uses a switch on OrderStatus
+Prints a different message for each status
+
+Example:
+
+SHIPPED → "Your order is on the way!"
+
+DELIVERED → "Thank you for shopping with us!"
+
+4. Test in main
+
+In a Main class:
+Create an order with status NEW
+Print its status message
+Change its status to SHIPPED
+Try to cancel it
+Print the final status
+
+
+Starter Code:
+
+ENUM CLASS -
+
+public enum OrderStatus {
+
+    NEW(/* description */, /* canBeCancelled */),
+    PROCESSING(/* description */, /* canBeCancelled */),
+    SHIPPED(/* description */, /* canBeCancelled */),
+    DELIVERED(/* description */, /* canBeCancelled */),
+    CANCELLED(/* description */, /* canBeCancelled */);
+
+    // TODO: add fields
+    // private String description;
+    // private boolean canBeCancelled;
+
+    // TODO: add constructor
+
+    // TODO: add getter for description
+
+    // TODO: add method canBeCancelled()
+}
+
+ORDER CLASS - 
+
+public class Order {
+
+    private int orderId;
+    private OrderStatus status;
+
+    public Order(int orderId, OrderStatus status) {
+        this.orderId = orderId;
+        this.status = status;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(OrderStatus status) {
+        this.status = status;
+    }
+
+    public void cancelOrder() {
+        // TODO:
+        // If the order can be cancelled, set status to CANCELLED
+        // Otherwise print an error message
+    }
+
+    public void printStatusMessage() {
+        // TODO:
+        // Use a switch statement on status
+        // Print a message for each OrderStatus
+    }
+}
+
+MAIN/RUNNER CLASS - 
+public class Runner {
+
+    public static void main(String[] args) {
+
+        // TODO:
+        // 1. Create an Order with status NEW
+        // 2. Print the status message
+        // 3. Change status to SHIPPED
+        // 4. Try to cancel the order
+        // 5. Print the final status and description
+    }
+}
