@@ -1,0 +1,59 @@
+Robust Student Grade Manager:
+
+You are building a small console program that:
+
+Asks the user for a student name
+
+Asks for a grade (0–100)
+
+Validates the input
+
+Prints the student’s grade
+
+The program must not crash, even if the user enters invalid input.
+
+Tasks:
+
+Task 1: Handle Invalid Input
+If the user enters non-numeric input for the grade, catch the exception and print:
+Invalid input. Please enter a number.
+
+Task 2: Validate Grade Range
+Grades must be between 0 and 100
+If not, throw an exception
+
+Task 3: Create a Custom Exception
+Create a custom exception called InvalidGradeException.
+
+Task 4: Use finally
+Ensure the scanner always closes.
+
+Task 5: Prevent Program Crash
+The program should never crash, regardless of input.
+
+
+STARTER CODE:
+import java.util.Scanner;
+
+public class StudentGradeManager {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter student name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter grade (0-100): ");
+        int grade = scanner.nextInt(); // <-- may cause exception
+
+        checkGrade(grade);
+
+        System.out.println("Student " + name + " has grade " + grade);
+
+        scanner.close();
+    }
+
+    public static void checkGrade(int grade) {
+        // TODO: Validate grade
+    }
+}
