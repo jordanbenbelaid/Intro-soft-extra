@@ -31,6 +31,10 @@ Ensure the scanner always closes.
 Task 5: Prevent Program Crash
 The program should never crash, regardless of input.
 
+EXTENSION:
+Loop until a valid input is entered
+Store multiple students
+
 
 STARTER CODE:
 import java.util.Scanner;
