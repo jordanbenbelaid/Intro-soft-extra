@@ -1,0 +1,46 @@
+Encapsulation:
+
+Create a class called Vehicle
+
+The class should contain:
+	- at least 3 attributes in general of a vehicle, and an id for each vehicle (as an int)
+	- a constructor with all attributes as parameters and a constructor with no parameters (You can add an extra if you want)
+	- getters and setters for your attributes
+	- 2 generic methods for a vehicle
+	- a toString (You can reformat this to make it look nicer)
+
+In your main runner class, then instantiate 4 objects
+
+Inheritance & Polymorphism:
+
+Create 3 sub classes (children classes) of Vehicle, each with 1 or 2 of its own attributes (that are different to the ones in Vehicle)
+create a constructor with every attribute (Including parent attributes) in each class
+create Getters and setters in each child class
+Override the generic methods for vehicle in each child class
+Create a toString in each child class (these should include the attributes from Vehicle as well)
+
+In a new class called Garage, create a list of vehicles(empty for now)
+Add a method that lets you add a vehicle to the list
+create a findVehicleById method to find a vehicle by its id
+STRETCH - create a findVehicleByType method to find vehicles based on its type
+
+Exceptions:
+Create a custom exception for VehicleNotFoundException and apply to your Garage class on the
+findVehicleById method
+
+Abstraction:
+Make your vehicle class an abstract class
+add 1 abstract method to your vehicle class called calcBill, and add the implementations 
+to your children classes on how you want the bill of that class to be calculated
+(this will be a way for you to calculate you overall bill based on the type of vehicle)
+In the garage class, create a calculateTotalBill method, that goes through your list and adds a cost to each vehicle
+depending on the vehicle type
+
+STRETCH - add a method to calculate the bill by id, add a method to remove a vehicle by id, 
+add a method to Calculate bill depending on the type of vehicle, and add any other methods you think will improve your garage!
+
+Interfaces:
+Create some interfaces that you can implement into your vehicle class and the children classes too 
+
+
+
